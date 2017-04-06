@@ -1,4 +1,5 @@
 /* Reviews For company */
+var addReview = module.exports = {
 router.post('/categories/category/company/review/:id', function(req, res, next) {
 
     var newReview = new Review({
@@ -40,4 +41,5 @@ router.get('/categories/category/company/:id/review',function(req, res, next) {
 
 
 });
+};
 /* END Show Reviews For Companies */
