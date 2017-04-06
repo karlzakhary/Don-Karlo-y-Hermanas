@@ -6,7 +6,7 @@ router.get('/search/byAddress', function(req,res){
 
         var Company = mongoose.model('Company');
 
-        Company.find({businessAddress: SearchItem},function(err,result){
+        Company.find({businessAddress: SearchItem2},function(err,result){
           if(err){
             res.json(err);
           }
