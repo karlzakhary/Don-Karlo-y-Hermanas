@@ -1,7 +1,7 @@
 var searchAddress = module.exports = {
 router.get('/search/byAddress', function(req,res){
 
-     var SearchItem=req.query.SearchItem;
+     var SearchItem2=req.query.SearchItem;
 
 
         var Company = mongoose.model('Company');
