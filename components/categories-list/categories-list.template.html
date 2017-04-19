@@ -1,0 +1,6 @@
+<h1>{{ $ctrl.heading }}</h1>
+<div class="app-post" ng-repeat=" category in $ctrl.categories ">
+	<a ui-sref="category({id: category._id}) "><h2>{{category.Categoryname}}</h2></a>
+</div>
+<a ui-sref="addCategory" class="button"   >Create New Category</a>
+

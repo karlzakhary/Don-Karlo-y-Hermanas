@@ -1,0 +1,5 @@
+<h1>{{ $ctrl.heading }}</h1>
+<div class="app-post" ng-repeat=" service in $ctrl.services ">
+	<a><h2>{{service}}</h2></a>
+</div>
+<button  class="button"  href="/#/admin/categories/addCategory" ng-click="addCategoryButton(this.href)">Create New Service</button>
