@@ -1,0 +1,7 @@
+<h1>{{ $ctrl.heading }}</h1>
+<div class="app-post" ng-repeat=" company in $ctrl.companies ">
+	<a ui-sref="company({id:company._id})"><h2>{{company.CompanyName}}</h2></a>
+</div>
+<button  class="button"  href="/#/admin/categories/category/addCategory" ng-click="addCategoryButton(this.href)">Create New Company</button>
+<a  class="button" ui-sref="deleteCategory({cid:company.Category})">Delete Category</a>
+<button  class="button"  ui-sref="category({id:category._id})">Update Category</button>
