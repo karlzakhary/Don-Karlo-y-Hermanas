@@ -1,0 +1,88 @@
+/* app css stylesheet */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #4AA05C;
+}
+.app-wrapper {
+    width: 60%;
+    position: relative;
+    margin: 50px auto;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Courier New';
+}
+h1 {
+    font-size: 60pt;
+    color: white;
+}
+h2 {
+    cursor: pointer;
+}
+a,
+a:visited,
+a:active,
+a:active {
+    color: black;
+    text-decoration: none;
+}
+.app-post {
+    font-family: 'Courier New';
+    background-color: white;
+    margin: 10px 0;
+    padding: 20px 40px;;
+   border-radius: 25px;
+}
+
+.button {
+    font-family: 'Courier New';
+    background-color: #4B504C;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.ul{
+    background-color: #4B504C;
+   border-radius: 10px;
+    margin: 0;
+    margin: 4px 2px;
+   padding: 15px 32px;
+}
+.li{
+    
+  font-family: 'Courier New';
+    padding: 15px 32px;
+        display: inline;
+}
+.td{
+    font-family: 'Courier New';
+        background-color: #4B504C;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+.tr{
+      font-family: 'Courier New';
+    background-color: white;
+    margin: 10px 0;
+    padding: 20px 40px;;
+   border-radius: 25px;
+}
+

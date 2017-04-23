@@ -1,0 +1,6 @@
+<h1>{{ $ctrl.heading }}</h1>
+<div class="app-post" ng-repeat=" service in $ctrl.services ">
+	<a><h2>{{service.servicename}}</h2></a>
+	<button  class="button" ui-sref= "updateService({ id: service.company , sid: service._id })">Update Service</button>
+	<a  class="button" ui-sref="deleteService({cid:service._id})" >Delete Service</a>
+</div>

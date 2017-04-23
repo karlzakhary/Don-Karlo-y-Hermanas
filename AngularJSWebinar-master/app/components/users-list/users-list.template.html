@@ -1,0 +1,5 @@
+<h1>{{ $ctrl.heading }}</h1>
+<div class="app-post" ng-repeat=" client in $ctrl.clients ">
+	<a ><h2>{{client.username}}</h2></a>
+	<a  class="button" ui-sref="deleteUser({ cid: client._id})">Delete User</a>
+</div>
