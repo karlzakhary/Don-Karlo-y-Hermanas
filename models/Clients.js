@@ -16,10 +16,13 @@ var ClientSchema = new mongoose.Schema({
 	},
 	lastname: {
 		type: String
-	}
+	},
+  phone: {
+    type: Number 
+  }
 });
 
-ClientSchema.methods.
+
 
 
 ClientSchema.methods.generateJWT = function() {

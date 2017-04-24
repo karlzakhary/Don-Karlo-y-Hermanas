@@ -1,8 +1,8 @@
 var mongoose = require('mongoose');
 
 var ReviewSchema = new mongoose.Schema({
-    author: String,
     body: String,
+    author: String,
     company: [{type: mongoose.Schema.Types.ObjectId, ref:'Company'}],
     upvotes: {type: Number, default: 0}
     }
