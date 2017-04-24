@@ -1,0 +1,8 @@
+
+<h1>{{ $ctrl.heading }}</h1>
+<script src="components/company/company.component.js"></script>
+<div class="app-post" ng-repeat=" company in $ctrl.companies ">
+	<a ui-sref="company({id:company._id})"><h2>{{company.CompanyName}}</h2></a>
+
+</div>
+<!--<a  class="button" ui-sref="deleteCategory({cid:company.Category})">Delete Category</a>!-->

@@ -1,0 +1,24 @@
+	  <script src="components/login/login.component.js"></script>
+
+    <h1>{{ $ctrl.heading }}</h1>
+     <div ng-controller="AuthCtrl">
+	  <form ng-submit="logIn()"
+	    style="margin-top:30px;">
+	    <h3>Log In</h3>
+	
+	    <div class="form-group">
+	      <input type="text"
+	      class="form-control"
+	      placeholder="Username"
+	      ng-model="user.username"></input>
+	    </div>
+	    <div class="form-group">
+	      <input type="password"
+	      class="form-control"
+	      placeholder="Password"
+	      ng-model="user.password"></input>
+	    </div>
+	    <button type="submit" class="btn btn-primary">Log In</button>
+	  </form>
+		</div>
+  </script>	
