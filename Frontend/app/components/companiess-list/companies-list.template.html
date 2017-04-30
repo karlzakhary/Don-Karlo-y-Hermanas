@@ -1,0 +1,13 @@
+<ul class="ul">
+  <li class="li"><a ui-sref="categories">Home</a></li>
+  <li class="li"><a ui-sref="users">Users</a></li>
+</ul>
+<h1>{{ $ctrl.heading }}</h1>
+<div class="app-post" ng-repeat=" company in $ctrl.companies ">
+	<a ui-sref="companyy({id:company._id})"><h2>{{company.CompanyName}}</h2></a>
+	<button  class="button"  ui-sref="addService({ cid: company._id })" >Create New Service</button>
+	<button  class="button"  ui-sref="updateCompany({ id: company._id , catid: company.Category})" >Update Company</button>
+	<a  class="button" ui-sref="deleteCompany({cid:company._id})" >Delete Company</a>
+	<a  class="button" ui-sref="addAdvertisment({cid:company._id})" >Add Advertisment</a>
+</div>
+

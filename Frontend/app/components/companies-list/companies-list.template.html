@@ -1,0 +1,18 @@
+<ul class="ul">
+   <nav class="li" ng-controller="NavCtrl">
+  <li ng-show="isLoggedIn()"><a class="app-post" href="/#/MyAccount/{{currentid()}}" ><h2>{{ currentUser() }}</h2></a>
+  <li ng-show="isLoggedIn()"><a class="button" href="/#/companies" >Companies</a></li>
+ <!-- <li ng-show="isLoggedIn()"><a class="button" href="/#/MyAccount" >Profile</a></li> -->
+  <li ng-show="isLoggedIn()"><a href="" ng-click="logOut()">Log Out</a></li>
+  <li ng-hide="isLoggedIn()"><a class="button" href="/#/login" >Login</a></li>
+   <li ng-hide="isLoggedIn()"><a class="button" href="/#/register" >Register</a></li>
+
+ 
+</ul>
+<h1>{{ $ctrl.heading }}</h1>
+<script src="components/company/company.component.js"></script>
+<div class="app-post" ng-repeat=" company in $ctrl.companies ">
+	<a ui-sref="company({id:company._id})"><h2>{{company.CompanyName}}</h2></a>
+
+</div>
+<!--<a  class="button" ui-sref="deleteCategory({cid:company.Category})">Delete Category</a>!-->

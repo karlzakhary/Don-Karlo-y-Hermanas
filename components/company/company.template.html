@@ -1,0 +1,10 @@
+<h1>{{ $ctrl.heading }}</h1>
+<script src="components/company/company.component.js"></script>
+	<script src="components/service/service.component.js"></script>
+	<h2>{{$ctrl.company.CompanyName}}</h2>
+	<h3> {{$ctrl.company.Description}}</h3>
+	<h1>{{$ctrl.company.Review.author}}</h1></a>
+<div class="app-post" ng-repeat=" service in $ctrl.company ">
+	<a ui-sref="service({id:service._id})"><h2>{{company.service.name}}</h2></a>
+
+</div>

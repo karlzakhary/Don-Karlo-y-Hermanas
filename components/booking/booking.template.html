@@ -1,0 +1,29 @@
+	  <h1>{{ $ctrl.heading }}</h1>
+     
+      <script src="components/booking/booking.component.js"></script>
+
+
+ <form ng-show="isLoggedIn()" style="margin-top:30px;">
+       
+        <h3>Book your slot</h3>
+
+   <div class="form-group"  ng-controller="bookingCtrl">
+
+            <!-- in ng-model first slot is the input from factory second one is the actual slot in the schema where it should be put in -->
+
+            <button ng-click="addBooking(12)" ng-model="book.slot.slot" class="btn btn-primary" type="submit" >12:00pm-2:00pm </button>
+            <button ng-click="addBooking(2)"  ng-model="book.slot.slot" class="btn btn-primary" type="submit">2:00pm-4:00pm</button>
+            <button ng-click="addBooking(4)" ng-model="book.slot.slot" class="btn btn-primary" type="submit">4:00pm-6:00pm</button>
+            <button ng-click="addBooking(6)" ng-model="book.slot.slot" class="btn btn-primary" type="submit">6:00pm-8:00pm</button>
+            <button ng-click="addBooking(8)" ng-model="book.slot.slot" class="btn btn-primary" type="submit">8:00pm-10:00pm</button>
+            <button ng-click="addBooking(10)" ng-model="book.slot.slot" class="btn btn-primary" type="submit">10:00pm-12:00pm</button>
+        </div >
+
+  </form>
+
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <ui-view></ui-view>
+    </div>
+</div>

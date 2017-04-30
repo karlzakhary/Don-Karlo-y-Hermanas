@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app=myProject>
+
+<!--  <head>
+    <script src="http://code.angularjs.org/1.2.0-rc.3/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>!-->
+<script src="script.js"></script>
+  <body  style="background-color:green;" >
+    <h1   align="center" style="font-size:500%;" style="font-family:courier;"> Start Searching </h1>
+    <table>
+        <tr>
+            <td align="left" style="font-size:200%;">Search :</td>
+            <td align="left" style="font-size:200%;"><input ng-model="query[queryBy]" /></td>
+        </tr>
+        <tr>
+            <td align="left" style="font-size:200%;">Search by:</td>
+            <td>
+                <select ng-model="queryBy">
+                    <option value="$">All</option>
+                    <option value="CompanyName">Name</option>
+                    <option value="CompanyAddress">Address</option>
+                    <option value="Categories">Category</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <div>
+        <table border="1" rules="groups" style="background-color:black;">
+            <tr>
+                <th  style="background-color:orange;" style="font-size:150%;" >Name</th>
+
+                <th style="background-color:orange;" style="font-size:150%;">Address</th>
+
+                <!-- <th  style="background-color:orange;" style="font-size:150%;" >Categories</th> -->
+
+                <th style="background-color:orange;" style="font-size:150%;">View Profile</th>
+            </tr>
+            <tr ng-repeat="comp in $ctrl.companies | filter:query">
+                <td style="background-color:yellow;">{{comp.CompanyName}}</td>
+                <td style="background-color:yellow;">{{comp.BusinessAddress}}</td>
+                <!-- <td style="background-color:yellow;"> -->
+                  <td style="background-color:yellow;"> <button ui-sref=company({id:comp._id})><h3>View Company Profile</h3></button></td>
+                </td>
+            </tr>
+        </table>
+    </div>
+  </body>
+
+</html>

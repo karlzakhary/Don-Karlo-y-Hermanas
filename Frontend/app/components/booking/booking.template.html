@@ -1,0 +1,40 @@
+<ul class="ul">
+   <nav class="li" ng-controller="NavCtrl">
+  <li ng-show="isLoggedIn()"><a class="app-post" href="/#/MyAccount/{{currentid()}}" ><h2>{{ currentUser() }}</h2></a>
+  <li ng-show="isLoggedIn()"><a class="button" href="/#/companies" >Companies</a></li>
+ <!-- <li ng-show="isLoggedIn()"><a class="button" href="/#/MyAccount" >Profile</a></li> -->
+  <li ng-show="isLoggedIn()"><a href="" ng-click="logOut()">Log Out</a></li>
+  <li ng-hide="isLoggedIn()"><a class="button" href="/#/login" >Login</a></li>
+   <li ng-hide="isLoggedIn()"><a class="button" href="/#/register" >Register</a></li>
+
+ 
+</ul>
+<section layout="row">
+<md-content layout="row" flex="66" layout-wrap>
+    <md-card ng-repeat="d in $ctrl.dates" ng-class="$ctrl.getColor($index)" class="md-whiteframe-z2" flex flex-sm="40" flex-xs="100">
+        <md-card-content>
+            <h2>{{d.k | date:'dd-MMM-yyyy'}}</h2>
+            <p layout="column">
+                <md-button class="md-primary md-raised" 
+                ng-repeat="i in d.v"
+                ng-click="$ctrl.showAdvanced(i)"
+                ng-disabled="!i.active"
+                flex>
+                    {{i.date | date:'h:mma'}}
+                </md-button>
+            </p>
+        </md-card-content>
+        <md-card-footer></md-card-footer>
+    </md-card>
+    
+</md-content>
+<md-card class="md-whiteframe-z2" flex="33">
+    <md-card-content>
+        <h2>Booked Appointments</h2>
+        <p layout="column" ng-repeat="a in $ctrl.bookings">
+            {{a.name}} ({{a.phone}}) => {{a.date | date:'dd-MMM-yyyy @ h:mma'}}
+        </p>
+    </md-card-content>
+    <md-card-footer></md-card-footer>
+</md-card>
+</section>

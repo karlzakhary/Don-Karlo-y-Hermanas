@@ -1,0 +1,40 @@
+ <script src="components/account/account.component.js"></script>
+  
+  <h1>{{ $ctrl.heading }}</h1>
+	
+	    <div class="form-group">
+	      <input type="text"
+	      class="form-control"
+	      placeholder="firstname"
+	      ng-model="firstname"></input>
+	    </div>
+			
+			<div class="form-group">
+	      <input type="text"
+	      class="form-control"
+	      placeholder="lastname"
+	      ng-model="lastname"></input>
+	    </div>
+
+      <div class="form-group">
+	      <input type="text"
+	      class="form-control"
+	      placeholder= "email"
+	      ng-model= "email"></input>
+	    </div>
+
+	    <div class="form-group">
+	      <input type="text"
+	      class="form-control"
+	      placeholder="Password"
+	      ng-model="password"></input>
+	    </div>
+
+		<div class="form-group">
+	      <input type="number"
+	      class="form-control"
+	      placeholder="phone"
+	      ng-model="phone"></input>
+	    </div>
+
+   <button class="button" ui-sref="companies" ng-click="updateClient()">Confirm</button>

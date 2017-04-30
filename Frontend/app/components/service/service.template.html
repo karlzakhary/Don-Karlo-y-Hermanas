@@ -1,0 +1,26 @@
+<ul class="ul">
+   <nav class="li" ng-controller="NavCtrl">
+  <li ng-show="isLoggedIn()"><a class="app-post" href="/#/MyAccount/{{currentid()}}" ><h2>{{ currentUser() }}</h2></a>
+  <li ng-show="isLoggedIn()"><a class="button" href="/#/companies" >Companies</a></li>
+ <!-- <li ng-show="isLoggedIn()"><a class="button" href="/#/MyAccount" >Profile</a></li> -->
+  <li ng-show="isLoggedIn()"><a href="" ng-click="logOut()">Log Out</a></li>
+  <li ng-hide="isLoggedIn()"><a class="button" href="/#/login" >Login</a></li>
+   <li ng-hide="isLoggedIn()"><a class="button" href="/#/register" >Register</a></li>
+
+ 
+</ul>
+<script src="components/register/register.component.js"></script>
+<script src="app.js"></script>
+<script src="components/account/account.component.js"></script>
+<ul class="uk">
+   <nav class="li" ng-controller="NavCtrl">
+<h1>{{ $ctrl.heading }}</h1>
+
+<script src="components/service/service.component.js"></script>
+	<h2>{{$ctrl.service.name}}</h2>
+	<h3> {{$ctrl.service.description}}</h3>
+	<h1>{{$ctrl.service.price}}</h1></a>
+	 <div>
+	 <li ng-show="isLoggedIn()"><a class="button" href="/#/bookings" >Book</a></li>
+</div>
+</ul> </nav>
