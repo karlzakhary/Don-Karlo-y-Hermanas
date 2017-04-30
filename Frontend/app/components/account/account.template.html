@@ -1,0 +1,51 @@
+ <ul class="ul">
+   <nav class="li" ng-controller="NavCtrl">
+  <li ng-show="isLoggedIn()"><a class="app-post" href="/#/MyAccount/{{currentid()}}" ><h2>{{ currentUser() }}</h2></a>
+  <li ng-show="isLoggedIn()"><a class="button" href="/#/companies" >Companies</a></li>
+ <!-- <li ng-show="isLoggedIn()"><a class="button" href="/#/MyAccount" >Profile</a></li> -->
+  <li ng-show="isLoggedIn()"><a href="" ng-click="logOut()">Log Out</a></li>
+  <li ng-hide="isLoggedIn()"><a class="button" href="/#/login" >Login</a></li>
+   <li ng-hide="isLoggedIn()"><a class="button" href="/#/register" >Register</a></li>
+
+ 
+</ul>
+ <script src="components/account/account.component.js"></script>
+  
+  <h1>{{ $ctrl.heading }}</h1>
+	
+	    <div class="form-group">
+	      <input type="text"
+	      class="form-control"
+	      placeholder="firstname"
+	      ng-model="firstname"></input>
+	    </div>
+			
+			<div class="form-group">
+	      <input type="text"
+	      class="form-control"
+	      placeholder="lastname"
+	      ng-model="lastname"></input>
+	    </div>
+
+      <div class="form-group">
+	      <input type="text"
+	      class="form-control"
+	      placeholder= "email"
+	      ng-model= "email"></input>
+	    </div>
+
+	    <div class="form-group">
+	      <input type="text"
+	      class="form-control"
+	      placeholder="Password"
+	      ng-model="password"></input>
+	    </div>
+
+		<div class="form-group">
+	      <input type="number"
+	      class="form-control"
+	      placeholder="phone"
+	      ng-model="phone"></input>
+	    </div>
+
+   <button class="button" ui-sref="companies" ng-click="updateClient()">Confirm</button>

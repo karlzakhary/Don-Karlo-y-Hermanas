@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- Step 1 -->
+<html lang="en" ng-app="seProject" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SeProject</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+
+<ul class="ul">
+  <li class="li"><a ui-sref="search">Filter Companies</a></li>
+
+</ul>
+    <!-- <div class="app-wrapper" ng-controller="PostListController"> -->
+    <div class="app-wrapper">
+        <!-- <input ng-model="heading" /> -->
+        <!-- <h1>{{ heading }}</h1> -->
+        <!-- Step 2 -->
+        <!-- <div class="app-post" ng-repeat="post in posts">
+            <h2>{{post.title}}</h2>
+        </div> -->
+        <!-- Step 3 -->
+        <!-- <categories-list></categories-list> !-->
+
+        <!-- Step 4 -->
+      <ui-view></ui-view>
+    </div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <!-- <script src="bower_components/angular-route/angular-route.js"></script> -->
+  <script src="app.js"></script>
+    <script src="components/service/service.component.js"></script>
+  <script src="components/login/login.component.js"></script>
+  <script src="components/account/account.component.js"></script>
+  <script src="components/register/register.component.js"></script>
+  <script src="components/company/company.component.js"></script>
+  <script src="components/booking/booking.component.js"></script>
+    <script src="components/categories-list/categories-list.component.js"></script>
+    <script src="components/companiess-list/companies-list.component.js"></script>
+    <script src="components/companies-list/companies-list.component.js"></script>
+  <script src="components/users-list/users-list.component.js"></script>
+    <script src="components/create-newCategory/create-newCategory.component.js"></script>
+       <script src="components/services-list/services-list.component.js"></script>
+         <script src="controllers/addCategoryCtrl.js"></script>
+         <script src="controllers/addCompanyCtrl.js"></script>
+         <script src="controllers/addServiceCtrl.js"></script>
+         <script src="controllers/addAdvertismentCtrl.js"></script>
+            <script src="controllers/updateCategoryCtrl.js"></script>
+            <script src="controllers/updateCompanyCtrl.js"></script>
+            <script src="controllers/updateServiceCtrl.js"></script>
+            <script src="components/delete-category/delete-category.component.js"></script>
+        <script src="components/delete-service/delete-service.component.js"></script>
+              <script src="components/delete-company/delete-company.component.js"></script>
+              <script src="components/delete-user/delete-user.component.js"></script>
+               <script src="components/search/search.component.js"></script>
+              
+
+     
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+ <ul class="ul">
+  <li class="li"><a ui-sref="categories">Home</a></li>
+  <li class="li"><a ui-sref="users">Users</a></li>
+</ul>
+ <script src="controllers/updateCompanyCtrl.js"></script>
+<h1>{{ $ctrl.heading }}</h1>
+      
+        <ul style="list-style-type:disc">
+
+          <div ng-controller = "updateCompanyCtrl" >
+
+          	<li><label>Company Name:</label>
+          	<input class="form-control" ng-model="CompanyName" ></li> 
+          	<br>
+
+          	<li><label>Business Email:</label>
+          	<input class="form-control" ng-model="businessEmail" ></li>
+          	<br>
+
+          	<li><label>Description:</label>
+          	<input class="form-control" ng-model="description" ></li>
+          	<br>
+
+          	<li><label>Business Address:</label>
+          	<input class="form-control" ng-model="businessAddress" ></li>
+          	<br>
+
+          	<li><label>Mobile:</label>
+          	<input class="form-control" ng-model="mobile" ></li>
+          	<br>
+
+          	<li><label>Bank Account Number:</label>
+          	<input class="form-control" ng-model="bankAccountNumber" ></li>
+          	<br>
+
+          	<li><label>Credit Card Number:</label>
+          	<input class="form-control" ng-model="creditCardNumber" ></li>
+          	<br>
+
+          	<button class="button" ui-sref="categories" ng-click="updateCompany()">Confirm</button>
+          </div>
+          
+         </ul> 

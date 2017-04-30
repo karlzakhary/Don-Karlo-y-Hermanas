@@ -1,0 +1,25 @@
+<ul class="ul">
+   <nav class="li" ng-controller="NavCtrl">
+  <li ng-show="isLoggedIn()"><a class="app-post" href="/#/MyAccount/{{currentid()}}" ><h2>{{ currentUser() }}</h2></a>
+  <li ng-show="isLoggedIn()"><a class="button" href="/#/companies" >Companies</a></li>
+ <!-- <li ng-show="isLoggedIn()"><a class="button" href="/#/MyAccount" >Profile</a></li> -->
+  <li ng-show="isLoggedIn()"><a href="" ng-click="logOut()">Log Out</a></li>
+  <li ng-hide="isLoggedIn()"><a class="button" href="/#/login" >Login</a></li>
+   <li ng-hide="isLoggedIn()"><a class="button" href="/#/register" >Register</a></li>
+
+ 
+</ul>
+<h1>{{ $ctrl.heading }}</h1>
+<script src="components/company/company.component.js"></script>
+	<script src="components/service/service.component.js"></script>
+	<h2>{{$ctrl.company._id}}</h2>
+	<h2>{{$ctrl.company.CompanyName}}</h2>
+	<h3> {{$ctrl.company.Description}}</h3>
+	<h1>{{$ctrl.company.Review.author}}</h1>
+	<h1>{{$ctrl.company.Services.name}}</h1>
+<div class="app-post" ng-repeat=" service in $ctrl.services ">
+	<a ui-sref="service({id:service})"><h2>{{service}}</h2></a>
+
+	
+
+</div>

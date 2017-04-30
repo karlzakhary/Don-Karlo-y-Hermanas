@@ -1,0 +1,43 @@
+ 
+ <h1>{{ $ctrl.heading }}</h1>
+	 <script src="components/register/register.component.js"></script>
+	<div ng-controller="AuthCtrl">
+	  <form ng-submit="register()"
+	    style="margin-top:30px;">
+	    <h3>Register</h3>
+	
+	    <div class="form-group">
+	      <input type="text"
+	      class="form-control"
+	      placeholder="Username"
+	      ng-model="user.username"></input>
+	    </div>
+	    <div class="form-group">
+	      <input type="password"
+	      class="form-control"
+	      placeholder="Password"
+	      ng-model="user.password"></input>
+	    </div>
+			<div class="form-group">
+	      <input type="text"
+	      class="form-control"
+	      placeholder="firstname"
+	      ng-model="firstname"></input>
+	    </div>
+			
+			<div class="form-group">
+	      <input type="text"
+	      class="form-control"
+	      placeholder="lastname"
+	      ng-model="lastname"></input>
+	    </div>
+
+			<div class="form-group">
+	      <input type="number"
+	      class="form-control"
+	      placeholder="phone"
+	      ng-model="phone"></input>
+	    </div>
+
+	    <button ui-sref="login" type="submit" class="btn btn-primary"ng-click="register()" >Register</button>
+	  </form>

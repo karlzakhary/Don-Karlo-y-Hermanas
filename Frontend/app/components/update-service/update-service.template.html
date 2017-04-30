@@ -1,0 +1,29 @@
+ <ul class="ul">
+  <li class="li"><a ui-sref="categories">Home</a></li>
+  <li class="li"><a ui-sref="users">Users</a></li>
+</ul>
+ <script src="controllers/updateServiceCtrl.js"></script>
+<h1>{{ $ctrl.heading }}</h1>
+      
+        <ul style="list-style-type:disc">
+
+          <div ng-controller = "updateServiceCtrl" >
+
+          	<li><label>Service Name:</label>
+          	<input class="form-control" ng-model="servicename" ></li> 
+          	<br>
+
+          	<li><label>Price:</label>
+          	<input class="form-control" ng-model="price" ></li>
+          	<br>
+
+          	<li><label>Description:</label>
+          	<input class="form-control" ng-model="description" ></li>
+          	<br>
+
+          	
+
+          	<button class="button" ui-sref="categories" ng-click="updateService()">Confirm</button>
+          </div>
+          
+         </ul> 

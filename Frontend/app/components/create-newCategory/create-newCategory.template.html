@@ -1,0 +1,18 @@
+  <ul class="ul">
+  <li class="li"><a ui-sref="categories">Home</a></li>
+  <li class="li"><a ui-sref="users">Users</a></li>
+</ul>
+  <script src="controllers/addCategoryCtrl.js"></script>
+<h1>{{ $ctrl.heading }}</h1>
+      <tbody>
+        <tr>
+
+          <div ng-controller = "addCategoryCtrl" >
+          	<td><input class="form-control" ng-model="Categoryname" ></td>
+          	<td><button class="button" ui-sref="categories" ng-click="addCategory()">Confirm</button></td>
+          </div>
+          
+          
+        </tr>
+        
+      </tbody>
